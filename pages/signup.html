@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up dummy</title>
+    <link rel="stylesheet" href="/css/phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen and (max-width:1210px)" href="/css/res.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-primary">
+        <div class="container">
+            <a class="navbar-brand" style="font-size: 1.5rem;" href="/">
+                <img class="img-fluid" style=" width: 22%;" src="/images/serenity.png" alt=""> Serenity</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarsExample07">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/screening.html">Quizz</a>
+                    </li>
+                    <button type="button" style="    padding: 0.5em 2em;" class="btn btn-danger rounded-pill"><a
+                            href="/pages/login.html"
+                            style="text-decoration: none; font-weight: normal; color: #f6f6f6;">Login</a></button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login">
+        <div class="heading">
+            <h1>JOIN US !!</h1>
+            <img src="/images/serenity.png" alt="loading...">
+        </div>
+        <div class="log">
+
+            <h1>BEING YOUR WELLNESS JOURNEY <br>
+                SIGN UP NOW
+            </h1>
+            <div class="form">
+
+                <p class="para">E-mail:</p>
+                <input type="email" id="email" placeholder="Email">
+                <p class="para">Password:</p>
+                <input type="password" id="password" placeholder="Password">
+                <button id="register">Register</button>
+            </div>
+
+            <p class="para1">Already a member? <span><a href="/pages/login.html">Log in</a></span></p>
+        </div>
+
+
+
+
+    </div>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAz_2Hy4kBVFdE2KEGI7v-HciYnZ3XF_Bc",
+            authDomain: "main-auth-50165.firebaseapp.com",
+            projectId: "main-auth-50165",
+            storageBucket: "main-auth-50165.appspot.com",
+            messagingSenderId: "827223416981",
+            appId: "1:827223416981:web:e3728239f2a07bb69a7b9c",
+            measurementId: "G-R2V09ZJXMQ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const registerButton = document.getElementById("register");
+            const loginButton = document.getElementById("login");
+            const logoutButton = document.getElementById("logout");
+
+            registerButton.addEventListener("click", () => {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+
+                createUserWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        const user = userCredential.user;
+                        console.log(user);
+                        alert("Registration successful!!");
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        alert("Registration error: " + error.message);
+                    });
+            });
+
+            loginButton.addEventListener("click", () => {
+                const email = document.getElementById("login_email").value;
+                const password = document.getElementById("login_password").value;
+
+                signInWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        const user = userCredential.user;
+                        console.log(user);
+                        alert(user.email + " logged in successfully!");
+                        logoutButton.style.display = "block";
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        alert("Login error: " + error.message);
+                    });
+            });
+
+            logoutButton.addEventListener("click", () => {
+                signOut(auth)
+                    .then(() => {
+                        console.log("Sign-out successful.");
+                        alert("Sign-out successful.");
+                        logoutButton.style.display = "none";
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        alert("Sign-out error: " + error.message);
+                    });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

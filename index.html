@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <button class="chat" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="chat-icon" src="/images/chat-dots.svg" alt=""></button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Serenity <Chat-Bot></Chat-Bot></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="chatbox" id="chatbox"></div>
+                   
+                </div>
+                <div class="modal-footer ">
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="text" id="userInput" class="form-control" placeholder="Type your message...">
+                        </div>
+                        <div class="col-3"><button onclick="sendMessage()" class="btn btn-danger">Send</button></div>
+                    </div>
+                    
+                  
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" style=" width: 22%;" src="/images/serenity.png" alt=""> Serenity</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarsExample07">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/screening.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#challenges">Challenges</a>
+                    </li>
+                    <button type="button" style="    padding: 0.5em 2em;"
+                        class="btn btn-danger rounded-pill"><a href="pages/login.html" style="text-decoration: none; color: #f6f6f6;">Login</a></button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Hero -->
+    <section class="container hero mt-4">
+        <div class="row">
+            <div class="col-12  col-md-7 hero-text">
+                <h1 class="head">
+                    Welcome to Serenity!
+                </h1>
+                <p class="subhead" id="quote">
+                    
+                </p>
+
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <button type="button" class="btn btn-danger rounded-pill"> <img src="/images/check-circle-fill.svg" alt="">
+                            <a style="text-decoration: none; color: #f6f6f6;" href="pages/screening.html">Start Screening</a></button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <button type="button" class="btn btn-outline-danger rounded-pill"> <img src="/images/music-note-beamed.svg"
+                                alt=""><a target="_blank" style="text-decoration: none; color: black;" href="https://open.spotify.com/playlist/5MSnyi9gTWKdlPQSaJxw3v?si=e7fcb95e6aff4ce6">Spotify Playlist</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 mt-4">
+                <img src="/images/mental-health-illustration.svg" class="img-fluid" />
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section class="about-section mt-5 mb-5 pb-4" id="About">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="logo">
+                        <img src="/images/brain-illustration.svg" style="width: 50%; margin-top: 20px;" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mt-5">
+                    <div class="about-txt">
+                        <h1 class="head">About us</h1>
+
+                        <p class="subhead">Welcome to our mindful oasis, where your mental wellbeing takes center stage.
+                            Our
+                            website
+                            is your personal companion on the path to emotional balance and self-awareness. Here, you'll
+                            find
+                            the
+                            tools and support needed to monitor and nurture your mental health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 col-12 why-text">
+                <h1 class="head">Why Us?</h1>
+                <p class="subhead">You should consider us because:</p>
+                <ul>
+                    <li>1. screening for mental health monitoring.</li>
+                    <li>2. 5 <b>free</b> sessions with specialised counsellors.</li>
+                    <li>3. challeges to help you level up your mental health.</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <img src="/images/chart.svg" style="height: 75%;" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Swiper -->
+    <section class="challenges" id="challenges">
+    
+    
+    <div class="swiper-bg">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper mb-5">
+            <div class="swiper-slide">
+ 
+                <div class="card-challenges">
+                    <div class="card-body">
+                        <h3 class="head">Gratitude Journaling</h3>
+                        <p class="subhead">1. Set Aside Time: Find a quiet moment in your day to dedicate to this practice. It could be in the morning, before bed, or
+                        any time that suits you.
+                        <br><br>
+                        2. Reflect and Record: Grab a notebook or use our digital journaling feature to jot down three things you're grateful for
+                        each day. They can be big or small, personal or universal. The key is to focus on the positive aspects.
+                        <br><br>
+                        3. Be Specific: Try to be specific about why you're grateful for each thing. What impact did it have on your day or your
+                        overall wellbeing?
+                        <br><br>
+                        4. Consistency is Key: Aim to do this daily. The more you practice, the more you'll notice a shift in your mindset.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-challenges">
+                    <div class="card-body">
+                        <h3 class="head">Daily Mindfulness Practice</h3>
+                        <p class="subhead">1. Commit to Daily Practice: Dedicate a few minutes each day to mindfulness. It could be in the morning, during a break, or
+                        in the evening—whenever suits you best.
+                        <br><br>
+                        2. Choose Your Practice: Select from a variety of mindfulness exercises provided on our platform. These may include guided
+                        meditation, deep breathing, body scan, and more.
+                        <br><br>
+                        3. Engage with Presence: Immerse yourself in the chosen practice. Focus on your breath, sensations, or the present
+                        environment, letting go of distractions.
+                        <br><br>
+                        4. Reflect on Your Experience: After each practice, take a moment to reflect on how you feel. Notice any shifts in your
+                        thoughts, emotions, or overall state of mind.
+                        <br><br>
+                        5. Track Your Progress: Use our tracking feature to log your daily practices. Witnessing your commitment and progress can
+                        be a powerful motivator.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-challenges">
+                    <div class="card-body">
+                        <h3 class="head">Screen-free hour</h3>
+                        <p class="subhead">1. Choose Your Hour: Select a time of day that works best for you to go screen-free. It could be in the morning, during
+                        lunch, or in the evening—whatever aligns with your schedule.
+                        <br><br>
+                        2. Set Your Intention: Decide how you'd like to spend this hour. It could be reading a book, going for a walk, engaging in
+                        a creative hobby, or simply relaxing without screens.
+                        <br><br>
+                        3. Create a Tech-Free Zone: Designate a space where screens are off-limits. This could be a room, a cozy corner, or even
+                        your entire living space.
+                        <br><br>
+                        4. Immerse Yourself in the Present: Engage fully in your chosen activity. Be present, savoring the sights, sounds, and
+                        sensations around you.
+                        <br><br>
+                        5. Reflect on Your Experience: After the hour, take a moment to reflect on how you feel. Notice any shifts in your mood,
+                        energy levels, or overall sense of well-being.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-challenges">
+                    <div class="card-body">
+                        <h3 class="head">Creative Expression</h3>
+                        <p class="subhead">1. Choose Your Medium: Select an artistic medium that resonates with you. It could be painting, drawing, writing, poetry,
+                        music, or any form of creative expression you feel drawn to.
+                        <br><br>
+                        2. Set Aside Time: Dedicate a specific block of time for your creative endeavor. This could be a few minutes or several
+                        hours, depending on your availability.
+                        <br><br>
+                        3. Let Go of Expectations: Release the need for perfection and simply allow yourself to create. Focus on the process rather
+                        than the end result.
+                        <br><br>
+                        4. Express Yourself Freely: Let your emotions guide your creative process. Use colors, shapes, words, or sounds to convey
+                        what's in your heart and mind.
+                        <br><br>
+                        5. Reflect on Your Creation: Take a moment to reflect on your artwork. What emotions or insights does it evoke? How does it
+                        make you feel?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-challenges">
+                    <div class="card-body">
+                        <h3 class="head">Physical Activity</h3>
+                        <p class="subhead">1. Set Your Goal: Decide on a realistic physical activity goal that aligns with your current fitness level and schedule. It
+                        could be as simple as a daily walk or a more structured workout routine.
+                        <br><br>
+                        2. Choose Your Activity: Select an activity that you enjoy. This could be jogging, yoga, dancing, swimming, or any form of
+                        exercise that brings you joy.
+                        <br><br>
+                        3. Allocate Time: Dedicate a specific time slot in your day for physical activity. Consistency is key, so aim for a routine
+                        that you can maintain.
+                        <br><br>
+                        4. Listen to Your Body: Pay attention to how your body feels during and after the activity. Adjust the intensity or
+                        duration as needed to ensure you're comfortable and safe.
+                        <br><br>
+                        5. Reflect on Your Experience: Take a moment to reflect on how the activity made you feel. Notice any changes in your mood,
+                        energy levels, or overall sense of well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
+</div>
+
+    <!-- Footer  -->
+    <footer class=" text-center text-white bg-dark">
+        <!-- Grid container -->
+        <div class="container-fluid p-4 pb-0 ">
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <span class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </span>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example29" class="form-control" />
+                                
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" >
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">Team Whitefire</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 9500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 1,
+                },
+                991: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+    </script>
+<script>
+    function sendMessage() {
+            var userInput = document.getElementById("userInput").value;
+            document.getElementById("chatbox").innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
+            document.getElementById("userInput").value = "";
+
+            // Simulate a response from the chatbot (you'd replace this with actual logic)
+            setTimeout(function () {
+                var botResponse = "I'm just a simple demo bot, but I'm here to support you!";
+                document.getElementById("chatbox").innerHTML += "<p><strong>Bot:</strong> " + botResponse + "</p>";
+            }, 1000);
+        }
+</script>
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

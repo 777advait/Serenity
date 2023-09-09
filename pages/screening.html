@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity - Path to Emotional Welleness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/screening.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-primary">
+        <div class="container">
+            <a class="navbar-brand" style="font-size: 1.5rem;" href="/">
+                <img class="img-fluid" style=" width: 22%;" src="/images/serenity.png" alt=""> Serenity</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse" id="navbarsExample07">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a  class="nav-link" href="/">Home </a>
+                    </li>
+                    <button type="button"  style="padding: 0.5em 2em;" class="btn btn-danger rounded-pill">Logout</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="branding">
+                <img class="nav-logo" src="/images/serenity.png" alt="">
+                <a class="navbar-brand" href="/">Serenity</a>
+            </div>
+    
+            <div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Challenges</a>
+                    </li>
+                    <li>
+                        <a href="#" class="cta">
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- <div id="startButtonContainer">
+        <button id="startButton" onclick="startScreening()">Start Screening</button>
+    </div> -->
+
+    <div class="hero">
+        <div class="modal" id="resultContainer" style="display: none;">
+            <button class="close-modal">&times;</button>
+            <h1>RESULT</h1>
+            <p id="resultText"></p>
+
+            <p class="counsellor">Still unsure? Consider booking an appointment with our expert counsellors</p>
+
+            <form action="">
+                <input class="email-input" type="email" name="email" id="email" placeholder="Enter your E-mail">
+
+                <input class="send-btn" type="submit" value="Send Updates" class="send-msg">
+            </form>
+
+            <!-- <a href="#" class="close-modal">Close Results</a> -->
+        </div>
+
+        <div class="overlay hidden"></div>
+        <div class="heading">
+            <h1 class="head">Self-Assessment for Mental Wellness</h1>
+            <p class="subhead">Take the First Step Towards Better Mental Health!</p>
+        </div>
+
+        <div class="screening">
+            <div id="questionContainer" style="display: none;">
+                <h1 id="questionText">Question goes here</h1>
+                <div id="optionsContainer"></div>
+            </div>
+        </div>
+    </d iv>
+    <script src="/js/screening.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

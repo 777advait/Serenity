@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "against";
+    src: url("/fonts/against\ regular.ttf");
+  }
+
+  :root {
+    --background: #fff;
+    --foreground: #175c75;
+    --tertiary: #a72608;
+  }
+  
+  body {
+    background-color: var(--background) !important;
+    margin: 0;
+    font-family: "Poppins";
+  }
+
+h1,h3{
+  font-family: "against";
+  color: #175c75 !important;
+}
+
+p,li{
+  color: #175c75;
+}
+  /* Navbar */
+
+  .navbar-brand{
+    color: var(--foreground) !important;
+  font-family: "against";
+  font-size: 3em;
+  }
+
+.nav-link{
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+    color: var(--foreground) !important;
+    margin: 0px 8px;
+  }
+
+
+  @media only screen and (min-width: 768px) {
+    .nav-link {
+      margin: 0px 25px;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease-in-out;
+    }
+    
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #FF0000;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .nav-link:hover {
+      color: #FF0000;
+    }
+    
+    .nav-link:hover::before {
+      transform: scaleX(1);
+    }
+  }
+
+  /* Hero */
+
+  @media only screen and (min-width: 768px) {
+    .hero-text {
+      padding: 130px 0px;
+    }
+  }
+
+
+/* About */
+.about-section{
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #f7f8f9;
+  
+}
+.about-section::before{
+  content: "";
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    opacity: 0.06;
+    color: #000000;
+    background: url(/images/bg1.png);
+    filter: blur(1px);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+
+
+  /* Why */
+  @media only screen and (min-width: 768px) {
+    .why-text {
+      padding: 60px 0px;
+    }
+  }
+
+
+  /* Swiper  */
+
+  .swiper1 {
+    position: relative;
+    height: 100%;
+  }
+
+  .swiper1{
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper-pagination{
+    position: relative !important;
+  }
+
+  .card-challenges{
+    padding: 0px 0px;
+  }
+  .card-body{
+    background-color: #fff;
+    margin-top: 40px;
+    padding: 30px !important;
+    border-radius: 40px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .card-challenges {
+      padding: 0px 250px;
+    }
+  }
+
+  .swiper-bg{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #f7f8f9;
+    
+  }
+  .swiper-bg::before{
+    content: "";
+      position: absolute;
+      width: 100%;
+      height: 70vh;
+      opacity: 0.06;
+      color: #000000;
+      background: url(/images/bg1.png);
+      filter: blur(1px);
+      background-repeat: repeat;
+      background-attachment: fixed;
+  }
+  
+  
+.chat {
+  position: fixed;
+  fill: #000000;
+  z-index: 10;
+  top: 90%;
+  left: 95%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  /* background-color: white; */
+  /* border-radius: 50%; */
+
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+
+}
+
+.chat-icon {
+  width: 30px;
+  height: 30px;
+}
+
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
